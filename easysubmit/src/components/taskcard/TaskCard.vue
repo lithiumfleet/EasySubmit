@@ -1,5 +1,5 @@
 <script setup>
-import uploadMain from "./UploadMain.vue"
+import uploadMain from "./uploadmain/UploadMain.vue"
 </script>
 <script>
 export default {
@@ -21,7 +21,7 @@ export default {
         <div class="card">
             <div class="content">
                 <h1>asdfasdf</h1>
-                <img src="../assets/icons8-物理-50.png"/>
+                <img src="@/assets/icons8-物理-50.png"/>
             </div>
             <div class="continue-icon" >
                 <el-icon class="icon-box" size="40">
@@ -35,9 +35,9 @@ export default {
         <uploadMain/>
         <template #footer>
             <div class="dialog-footer">
-            <el-button @click="uploadCardVisiable=false">Cancel</el-button>
+            <el-button @click="uploadCardVisiable=false">取消提交</el-button>
             <el-button type="primary" @click="uploadCardVisiable=false">
-                Confirm
+                提交文件
             </el-button>
             </div>
         </template>

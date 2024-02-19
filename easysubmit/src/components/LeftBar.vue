@@ -8,11 +8,10 @@ import taskList from "./TaskList.vue"
             <taskList/>
         </el-tab-pane>
         <el-tab-pane label="已完成">Config</el-tab-pane>
-        <el-tab-pane label="提交记录">Role</el-tab-pane>
         <el-tab-pane label="About">Task</el-tab-pane>
     </el-tabs>
 
 </template>
 
-<style>
+<style scoped>
 </style>

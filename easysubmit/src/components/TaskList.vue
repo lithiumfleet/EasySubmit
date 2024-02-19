@@ -1,5 +1,5 @@
 <script setup>
-import taskCard from "./TaskCard.vue"
+import taskCard from "./taskcard/TaskCard.vue"
 </script>
 
 <template>

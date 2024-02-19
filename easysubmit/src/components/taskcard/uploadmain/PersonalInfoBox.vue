@@ -14,18 +14,21 @@ export default {
         <el-form-item label="学号">
             <el-input 
                 v-model="new_personal_info.student_number" 
-                placeholder="2022XXXXXX" 
-                clearable 
+                placeholder="2022xxxxxx" 
+                maxlength="10"
+                size="large"
             />
         </el-form-item>
         <el-form-item label="姓名">
             <el-input 
                 v-model="new_personal_info.student_name" 
                 placeholder="XXX" 
-                clearable 
+                size="large"
             />
         </el-form-item>
     </el-form>
 </template>
 
-<style></style>
+<style scoped>
+
+</style>
