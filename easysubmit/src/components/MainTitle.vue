@@ -17,6 +17,8 @@
     height: 100%;
     display: flex;
     justify-content: center;
+    border-top-right-radius: 25px;
+    border-top-left-radius:  25px;
 }
 .title img {
     position: absolute;

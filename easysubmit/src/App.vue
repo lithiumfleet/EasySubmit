@@ -1,29 +1,48 @@
 <script setup>
 import mainTitle from "./components/MainTitle.vue"
-import leftBar from "./components/LeftBar.vue"
+import mainContent from "./components/MainContent.vue"
 import infoArea from "./components/InfoArea.vue"
 </script>
 
 <template>
-<div>
-  <div class="site-title">
-    <mainTitle/>
-  </div>
-  <div class="main-content">
-    <div class="leftbar">
-      <leftBar/>
+<div class="main-page">
+  <div class="main-page-warp">
+    <div class="site-title">
+      <mainTitle/>
     </div>
-  </div>
-  <div class="info-area">
-    <infoArea/>
+
+    <div class="main-content">
+      <mainContent/>
+    </div>
+
+    <div class="info-area">
+      <infoArea/>
+    </div>
   </div>
 </div>
 
 </template>
 
 <style scoped>
+.main-page {
+  text-align: center;
+  width: 100%; 
+  background-image: url(./assets/main-bg.jpg);
+  background-size: cover;
+  z-index: -1;
+}
+.main-page-warp {
+  width: 1300px;
+  height: auto;
+  position: relative;
+  top: 50%;            
+  left: 50%; 
+  transform: translate(-50%);
+}
 .site-title {
-  height: 100px;
+  position: relative;
+  margin-bottom: 8px;
+  height: 90px;
   width: 100%;
   align-items: stretch;
 }
@@ -32,13 +51,17 @@ import infoArea from "./components/InfoArea.vue"
   height: 600px;
   width: 100%;
   display: flex;
-}
-.main-content .leftbar {
-  height: 100%;
-  width: 100%;
+  position: relative;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 .info-area{
-    height: 200px;
-    width: 100%;
+  align-items: stretch;
+  position: relative;
+  margin-top: 8px;
+  height: 140px;
+  width: 100%;
+  background-color: rgb(242, 243, 244);
+  
 }
 </style>

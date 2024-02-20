@@ -39,7 +39,7 @@ import taskCard from "./taskcard/TaskCard.vue"
 <style>
 .list-container {
   display: flex;
-  height: 550px;
+  height: 800px;
   width: 100%;
 }
 .list {
@@ -51,7 +51,10 @@ import taskCard from "./taskcard/TaskCard.vue"
 .list-item {
   flex-basis: 25%; 
   list-style-type: none; 
-  margin: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 </style>
