@@ -3,6 +3,12 @@ import uploadMain from "./uploadmain/UploadMain.vue"
 </script>
 <script>
 export default {
+    props: {
+        isTeamWork: {
+            type: Boolean,
+            default: false
+        }
+    },
     data() {
         return {
             uploadCardVisiable: false
@@ -32,7 +38,7 @@ export default {
     </el-card>
 
     <el-dialog v-model="uploadCardVisiable" title="提交文件" width="1000">
-        <uploadMain/>
+        <uploadMain :is-team-work="isTeamWork"/>
         <template #footer>
             <div class="dialog-footer">
             <el-button @click="uploadCardVisiable=false">取消提交</el-button>

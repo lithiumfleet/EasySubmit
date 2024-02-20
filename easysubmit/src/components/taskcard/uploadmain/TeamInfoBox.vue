@@ -41,10 +41,10 @@ export default{
       </el-form-item>
     </el-form>
     <!-- 表格部分 -->
-    <el-table :data="tableData" style="width: 100%" max-height="200">
-      <el-table-column prop="student_number" label="学号" width="120" />
-      <el-table-column prop="student_name" label="姓名" width="120" />
-      <el-table-column label="编辑" width="80">
+    <el-table :data="tableData" style="width: 70%" max-height="200">
+      <el-table-column prop="student_number" label="学号" />
+      <el-table-column prop="student_name" label="姓名" />
+      <el-table-column label="编辑" >
         <template #default="scope">
           <el-button
             link
@@ -64,5 +64,6 @@ export default{
 <style scoped>
 .main {
   display: flex;
+  justify-content: space-between;
 }
 </style>

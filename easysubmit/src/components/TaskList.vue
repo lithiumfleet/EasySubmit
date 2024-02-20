@@ -5,7 +5,7 @@ import taskCard from "./taskcard/TaskCard.vue"
 <template>
 <el-scrollbar class="list-container">
   <ul class="list">
-    <li class="list-item"> <taskCard/> </li>
+    <li class="list-item"> <taskCard :is-team-work="true"/> </li>
     <li class="list-item"> <taskCard/> </li>
     <li class="list-item"> <taskCard/> </li>
     <li class="list-item"> <taskCard/> </li>
