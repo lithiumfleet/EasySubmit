@@ -1,19 +1,26 @@
+<script setup>
+import { check_valid_student_name, check_valid_student_number } from './CheckValid';
+</script>
+
 <script>
-export default{
+export default {
   data() { return {
     tableData:[],
     new_student:{
-      student_name:"",
-      student_number:""
+      student_name:undefined,
+      student_number:undefined
     }
   } },
-
   methods: {
     deleteRow(index) {
       this.tableData.splice(index, 1);
     },
     onAddItem() {
-      this.tableData.push(Object.assign({},this.new_student));
+      if (check_valid_student_name(this.new_student.student_name) 
+          && check_valid_student_number(this.new_student.student_number)
+          ) {
+          this.tableData.push(Object.assign({},this.new_student));
+        }
     }
   }
 }
@@ -26,10 +33,19 @@ export default{
       style="max-width: 300px"
     >
       <el-form-item label="学号">
-        <el-input v-model="new_student.student_number"/>
+          <el-input-number
+              v-model="new_student.student_number" 
+              placeholder="2022xxxxxx" 
+              size="large"
+              :controls="false"
+          />
       </el-form-item>
-      <el-form-item label="姓名">
-        <el-input v-model="new_student.student_name"/>
+      <el-form-item label="姓名" >
+        <el-input 
+            v-model="new_student.student_name" 
+            placeholder="XXX" 
+            size="large"
+        />
       </el-form-item>
       <el-form-item>
         <el-button 
