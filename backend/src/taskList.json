@@ -1,0 +1,38 @@
+[
+    {
+        "taskname": "信号与系统大作业",
+        "project": "信号与系统",
+        "tasktype": "teamwork",
+        "description": "ppt大作业, 需要组队完成",
+        "starting_time": "2024-2-21",
+        "dead_line": "2024-2-22",
+        "icon": "/src/assets/taskicons/xhxt.png"
+    },
+    {
+        "taskname": "物理报告",
+        "project": "物理",
+        "tasktype": "personal",
+        "description": "个人作业, 仔细填写实验报告",
+        "starting_time": "2024-2-20",
+        "dead_line": "2024-2-23",
+        "icon": "/src/assets/taskicons/wl.png"
+    },
+    {
+        "taskname": "信号与系统大作业",
+        "project": "信号与系统",
+        "tasktype": "teamwork",
+        "description": "ppt大作业, 需要组队完成",
+        "starting_time": "2024-2-21",
+        "dead_line": "2024-2-22",
+        "icon": "/src/assets/taskicons/xhxt.png"
+    },
+    {
+        "taskname": "物理报告",
+        "project": "物理",
+        "tasktype": "personal",
+        "description": "个人作业, 仔细填写实验报告",
+        "starting_time": "2024-2-20",
+        "dead_line": "2024-2-23",
+        "icon": "/src/assets/taskicons/wl.png"
+    }
+]

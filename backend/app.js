@@ -6,6 +6,7 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var tasklistRouter = require('./routes/tasklist')
 
 var app = express();
 
@@ -19,8 +20,21 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// from gpt!
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', '*'); // 允许所有域访问，也可以指定特定域
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  if (req.method === 'OPTIONS') {
+    res.sendStatus(200); // 预检请求返回 200 状态码
+  } else {
+    next();
+  }
+});
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/tasklist', tasklistRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

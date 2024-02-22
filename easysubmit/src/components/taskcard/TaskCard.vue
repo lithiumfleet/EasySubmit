@@ -4,9 +4,33 @@ import uploadMain from "./uploadmain/UploadMain.vue"
 <script>
 export default {
     props: {
-        isTeamWork: {
-            type: Boolean,
-            default: false
+        tasktype: {
+            type: String,
+            default: "personal"
+        },
+        taskname: {
+            type: String,
+            default: "new-task"
+        },
+        project: {
+            type: String,
+            default: "new-project"
+        },
+        description: {
+            type: String,
+            default: "description"
+        },
+        starting_time: {
+            type: String,
+            default: "2024-1-1"
+        },
+        dead_line: {
+            type: String,
+            default: "2024-1-1"
+        },
+        icon: {
+            type: String,
+            default: "/src/assets/icons8-物理-50.png"
         }
     },
     data() {
@@ -26,8 +50,12 @@ export default {
     <el-card shadow="always" @click="open_upload_card">
         <div class="card">
             <div class="content">
-                <h1>asdfasdf</h1>
-                <img src="@/assets/icons8-物理-50.png"/>
+                <h1>{{ taskname }}</h1>
+                <h3>{{ project }}</h3>
+                <img :src="icon"/>
+                <div class="due-time">
+                    <p>{{ starting_time }} 至 {{ dead_line }}</p>
+                </div>
             </div>
             <div class="continue-icon" >
                 <el-icon class="icon-box" size="40">
@@ -38,7 +66,7 @@ export default {
     </el-card>
 
     <el-dialog v-model="uploadCardVisiable" title="提交文件" width="1000">
-        <uploadMain :is-team-work="isTeamWork"/>
+        <uploadMain :tasktype="tasktype" :description="description"/>
         <template #footer>
             <div class="dialog-footer">
             <el-button @click="uploadCardVisiable=false">取消提交</el-button>
