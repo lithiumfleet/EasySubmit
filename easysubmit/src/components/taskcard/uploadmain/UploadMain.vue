@@ -26,7 +26,7 @@ export default {
         </el-divider>
         <TeamInfoBox v-if="tasktype === 'teamwork'"/>
         <PersonalInfoBox v-else/>
-        <UploadBox/>
+        <UploadBox :tasktype="tasktype"/>
     </div>
 </template>
 

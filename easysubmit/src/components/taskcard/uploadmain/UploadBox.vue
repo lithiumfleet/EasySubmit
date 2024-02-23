@@ -1,12 +1,48 @@
-<script setup></script>
+<script setup>
+import { ElNotification } from 'element-plus'
+</script>
+<script>
+export default {
+    props: {
+        tasktype: String
+    },
+    data() {return {
+        filelist: []
+    }},
+    methods: {
+        submitUpload() {
+            this.$refs.upload.submit();
+        },
+        successAlert() {
+            this.filelist = []; // clean filelist
+            ElNotification({
+                title: 'Success',
+                message: '提交成功, 可以关闭窗口了.',
+                type: 'success',
+            })
+        },
+        errorAlert() {
+            ElNotification({
+                title: 'Error',
+                message: '请检查网络环境, 如果确定是服务器问题请联系我.',
+                type: 'error',
+            })
+        }
+    }
+}
+</script>
 <template>
     <el-upload
         class="upload-box"
+        ref="upload"
         drag
-        action="http://127.0.0.1:3000/upload/personal"
+        :action="`http://127.0.0.1:3000/upload/${tasktype}`"
         :multiple="true"
-        :auto-upload="true"
         :show-file-list="true"
+        :auto-upload="false"
+        :on-success="successAlert"
+        :on-error="errorAlert"
+        :file-list="filelist"
     >
         <el-icon size="80">
             <DocumentAdd/>
@@ -15,12 +51,13 @@
             <br>
             拖动文件到此处或<em>点击上传</em>文件
         </div>
+
         <template #tip>
-        <div class="upload-tips">
             请保证文件大小在<strong>2MB</strong>以下~
-        </div>
         </template>
+
     </el-upload>
+    <el-button type="primary" @click="submitUpload">提交文件</el-button>
 </template>
 
 <style scoped></style>
