@@ -6,8 +6,7 @@ import UploadBox from './UploadBox.vue';
 <script>
 export default {
     props: {
-        tasktype: String,
-        description: String
+        info: Object
     }
 }
 
@@ -19,14 +18,14 @@ export default {
             <el-text type="primary" size="large"><strong>任务描述: </strong></el-text>
             <br/>
             <br/>
-            <el-text>&emsp;&emsp;&emsp;{{ description }}</el-text>
+            <el-text>&emsp;&emsp;&emsp;{{ info.description }}</el-text>
         </div>
         <el-divider border-style="double">
             <el-icon size="large"><MostlyCloudy /></el-icon>
         </el-divider>
-        <TeamInfoBox v-if="tasktype === 'teamwork'"/>
+        <TeamInfoBox v-if="info.tasktype === 'teamwork'"/>
         <PersonalInfoBox v-else/>
-        <UploadBox :tasktype="tasktype"/>
+        <UploadBox :info="info"/>
     </div>
 </template>
 

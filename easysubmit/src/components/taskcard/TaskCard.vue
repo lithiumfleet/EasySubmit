@@ -35,7 +35,16 @@ export default {
     },
     data() {
         return {
-            uploadCardVisiable: false
+            uploadCardVisiable: false,
+            info: {
+                tasktype: this.tasktype,
+                taskname: this.taskname,
+                project: this.project,
+                description: this.description,
+                starting_time: this.starting_time,
+                dead_line: this.dead_line,
+                icon: this.icon
+            }
         }
     },
     methods: {
@@ -66,7 +75,7 @@ export default {
     </el-card>
 
     <el-dialog v-model="uploadCardVisiable" title="提交文件" width="1000">
-        <uploadMain :tasktype="tasktype" :description="description"/>
+        <uploadMain :info="info"/>
         <div class="button-warp">
             <div class="button">
                 <el-button @click="uploadCardVisiable=false">取消提交</el-button>

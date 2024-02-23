@@ -4,7 +4,7 @@ import { ElNotification } from 'element-plus'
 <script>
 export default {
     props: {
-        tasktype: String
+        info: Object
     },
     data() {return {
         filelist: []
@@ -36,13 +36,14 @@ export default {
         class="upload-box"
         ref="upload"
         drag
-        :action="`http://127.0.0.1:3000/upload/${tasktype}`"
+        :action="`http://127.0.0.1:3000/upload/${info.tasktype}`"
         :multiple="true"
         :show-file-list="true"
         :auto-upload="false"
         :on-success="successAlert"
         :on-error="errorAlert"
         :file-list="filelist"
+        :data="info"
     >
         <el-icon size="80">
             <DocumentAdd/>
