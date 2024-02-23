@@ -11,7 +11,14 @@ router.post('/*', (req, res) => {
             res.status(400).send('Error uploading files');
             return;
         }
-        console.log(fields);
+
+        let info = JSON.parse(fields.submit_info);
+        let now = new Date();
+        Object.assign(info, {
+            ip: req.ip,
+            submit_time: `${now.getFullYear()}-${now.getMonth()+1}-${now.getDate()}`
+        })
+        console.log(info);
 
         const uploadedFiles = files.file.map(file => {
             const fileName = file.originalFilename;

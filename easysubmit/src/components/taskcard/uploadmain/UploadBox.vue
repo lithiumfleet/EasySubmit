@@ -14,7 +14,7 @@ export default {
             this.$refs.upload.submit();
         },
         successAlert() {
-            this.filelist = []; // clean filelist
+            this.filelist = []; 
             ElNotification({
                 title: 'Success',
                 message: '提交成功, 可以关闭窗口了.',
