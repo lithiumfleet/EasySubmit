@@ -47,7 +47,8 @@ export default {
                 personalinfo: {
                     name: "",
                     number: ""
-                }
+                },
+                teaminfo: []
             }
         }
     },

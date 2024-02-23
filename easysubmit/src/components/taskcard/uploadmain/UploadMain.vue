@@ -9,11 +9,14 @@ export default {
         info: Object
     },
     methods: {
-        onupdateinfoname(name) {
+        onUpdateInfoname(name) {
             this.info.personalinfo.name = name;
         },
-        onupdateinfonumber(number) {
+        onUpdateInfonumber(number) {
             this.info.personalinfo.number = number;
+        },
+        onUpdateTeaminfo(tabledata) {
+            this.info.teaminfo = tabledata;
         }
     }
 }
@@ -32,10 +35,11 @@ export default {
             <el-icon size="large"><MostlyCloudy /></el-icon>
         </el-divider>
         <TeamInfoBox v-if="info.tasktype==='teamwork'"
+            @update-teaminfo="onUpdateTeaminfo"
         />
         <PersonalInfoBox v-else 
-            @update-name="onupdateinfoname" 
-            @update-number="onupdateinfonumber"
+            @update-name="onUpdateInfoname" 
+            @update-number="onUpdateInfonumber"
         />
         <UploadBox :info="info"/>
     </div>

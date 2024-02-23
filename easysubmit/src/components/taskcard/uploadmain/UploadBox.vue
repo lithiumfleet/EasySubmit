@@ -43,7 +43,7 @@ export default {
         :on-success="successAlert"
         :on-error="errorAlert"
         :file-list="filelist"
-        :data="info"
+        :data="{submit_info:JSON.stringify(info)}"
     >
         <el-icon size="80">
             <DocumentAdd/>

@@ -14,12 +14,14 @@ export default {
   methods: {
     deleteRow(index) {
       this.tableData.splice(index, 1);
+      this.$emit('update-teaminfo', this.tableData);
     },
     onAddItem() {
       if (check_valid_student_name(this.new_student.student_name) 
           && check_valid_student_number(this.new_student.student_number)
           ) {
           this.tableData.push(Object.assign({},this.new_student));
+          this.$emit('update-teaminfo', this.tableData);
         }
     }
   }
@@ -57,7 +59,7 @@ export default {
       </el-form-item>
     </el-form>
     <!-- 表格部分 -->
-    <el-table :data="tableData" style="width: 70%" max-height="200">
+    <el-table :data="tableData" stripe style="width: 70%" max-height="200">
       <el-table-column prop="student_number" label="学号" />
       <el-table-column prop="student_name" label="姓名" />
       <el-table-column label="编辑" >
