@@ -3,8 +3,10 @@
     <el-upload
         class="upload-box"
         drag
-        action="https://myserver!!!"
-        multiple
+        action="http://127.0.0.1:3000/upload/personal"
+        :multiple="true"
+        :auto-upload="true"
+        :show-file-list="true"
     >
         <el-icon size="80">
             <DocumentAdd/>
