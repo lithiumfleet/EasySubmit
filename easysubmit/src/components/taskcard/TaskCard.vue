@@ -43,7 +43,11 @@ export default {
                 description: this.description,
                 starting_time: this.starting_time,
                 dead_line: this.dead_line,
-                icon: this.icon
+                icon: this.icon,
+                personalinfo: {
+                    name: "",
+                    number: ""
+                }
             }
         }
     },

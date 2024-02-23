@@ -7,6 +7,14 @@ import UploadBox from './UploadBox.vue';
 export default {
     props: {
         info: Object
+    },
+    methods: {
+        onupdateinfoname(name) {
+            this.info.personalinfo.name = name;
+        },
+        onupdateinfonumber(number) {
+            this.info.personalinfo.number = number;
+        }
     }
 }
 
@@ -23,8 +31,12 @@ export default {
         <el-divider border-style="double">
             <el-icon size="large"><MostlyCloudy /></el-icon>
         </el-divider>
-        <TeamInfoBox v-if="info.tasktype === 'teamwork'"/>
-        <PersonalInfoBox v-else/>
+        <TeamInfoBox v-if="info.tasktype==='teamwork'"
+        />
+        <PersonalInfoBox v-else 
+            @update-name="onupdateinfoname" 
+            @update-number="onupdateinfonumber"
+        />
         <UploadBox :info="info"/>
     </div>
 </template>

@@ -5,7 +5,15 @@ export default {
             student_number: undefined,
             student_name: undefined
         },
-    } },
+    }},
+    methods: {
+        updateNumber(number) {
+            this.$emit('update-number', number);
+        },
+        updateName(name) {
+            this.$emit('update-name', name);
+        }
+    }
 }
 </script>
 
@@ -18,6 +26,7 @@ export default {
                     placeholder="2022xxxxxx" 
                     size="large"
                     :controls="false"
+                    @input="updateNumber"
                 />
             </div>
         </el-form-item>
@@ -27,6 +36,7 @@ export default {
                     v-model="new_personal_info.student_name" 
                     placeholder="XXX" 
                     size="large"
+                    @input="updateName"
                 />
             </div>
         </el-form-item>
