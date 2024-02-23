@@ -67,14 +67,11 @@ export default {
 
     <el-dialog v-model="uploadCardVisiable" title="提交文件" width="1000">
         <uploadMain :tasktype="tasktype" :description="description"/>
-        <template #footer>
-            <div class="dialog-footer">
-            <el-button @click="uploadCardVisiable=false">取消提交</el-button>
-            <el-button type="primary" @click="uploadCardVisiable=false">
-                提交文件
-            </el-button>
+        <div class="button-warp">
+            <div class="button">
+                <el-button @click="uploadCardVisiable=false">取消提交</el-button>
             </div>
-        </template>
+        </div>
     </el-dialog>
 
 
@@ -99,5 +96,14 @@ export default {
 }
 .icon {
     margin-right: 0px
+}
+.button-warp {
+    position: absolute;
+    left: 77%;
+    bottom: 16px;
+}
+.button {
+    position: relative;
+    left: 35%;
 }
 </style>

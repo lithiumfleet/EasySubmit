@@ -48,16 +48,19 @@ export default {
             <DocumentAdd/>
         </el-icon>
         <div class="upload-content">
-            <br>
+            <br/>
             拖动文件到此处或<em>点击上传</em>文件
+            <br/>
+            请保证单个文件大小在<strong>10MB</strong>以下~
         </div>
-
-        <template #tip>
-            请保证文件大小在<strong>2MB</strong>以下~
-        </template>
-
     </el-upload>
-    <el-button type="primary" @click="submitUpload">提交文件</el-button>
+    <div class="submit-button">
+        <el-button type="primary" @click="submitUpload">提交文件</el-button>
+    </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.submit-button {
+    text-align: right;
+}
+</style>

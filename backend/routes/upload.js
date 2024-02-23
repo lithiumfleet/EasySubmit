@@ -4,7 +4,6 @@ var fs = require('fs');
 
 var router = express.Router();
 
-// 代码未测试
 router.post('/personal', (req, res) => {
     const form = new multiparty.Form();
     form.parse(req, (err, fields, files) => {
