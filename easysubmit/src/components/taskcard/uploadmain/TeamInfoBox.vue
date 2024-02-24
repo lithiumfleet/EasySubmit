@@ -7,8 +7,8 @@ export default {
   data() { return {
     tableData:[],
     new_student:{
-      student_name:undefined,
-      student_number:undefined
+      name:undefined,
+      number:undefined
     }
   } },
   methods: {
@@ -17,8 +17,8 @@ export default {
       this.$emit('update-teaminfo', this.tableData);
     },
     onAddItem() {
-      if (check_valid_student_name(this.new_student.student_name) 
-          && check_valid_student_number(this.new_student.student_number)
+      if (check_valid_student_name(this.new_student.name) 
+          && check_valid_student_number(this.new_student.number)
           ) {
           this.tableData.push(Object.assign({},this.new_student));
           this.$emit('update-teaminfo', this.tableData);
@@ -36,7 +36,7 @@ export default {
     >
       <el-form-item label="学号">
           <el-input-number
-              v-model="new_student.student_number" 
+              v-model="new_student.number" 
               placeholder="2022xxxxxx" 
               size="large"
               :controls="false"
@@ -44,7 +44,7 @@ export default {
       </el-form-item>
       <el-form-item label="姓名" >
         <el-input 
-            v-model="new_student.student_name" 
+            v-model="new_student.name" 
             placeholder="XXX" 
             size="large"
         />
@@ -60,8 +60,8 @@ export default {
     </el-form>
     <!-- 表格部分 -->
     <el-table :data="tableData" stripe style="width: 70%" max-height="200">
-      <el-table-column prop="student_number" label="学号" />
-      <el-table-column prop="student_name" label="姓名" />
+      <el-table-column prop="number" label="学号" />
+      <el-table-column prop="name" label="姓名" />
       <el-table-column label="编辑" >
         <template #default="scope">
           <el-button

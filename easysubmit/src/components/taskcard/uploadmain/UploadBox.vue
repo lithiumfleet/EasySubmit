@@ -17,14 +17,14 @@ export default {
             this.filelist = []; 
             ElNotification({
                 title: 'Success',
-                message: '提交成功, 可以关闭窗口了.',
+                message: '提交成功, 可以关闭窗口了~',
                 type: 'success',
             })
         },
         errorAlert() {
             ElNotification({
                 title: 'Error',
-                message: '请检查网络环境, 如果确定是服务器问题请联系我.',
+                message: '首先请检查填写的学号姓名是否正确, 其次请检查网络环境. 如果确定是服务器问题请联系我.',
                 type: 'error',
             })
         }

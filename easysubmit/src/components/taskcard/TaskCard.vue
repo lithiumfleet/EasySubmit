@@ -40,6 +40,7 @@ export default {
                 tasktype: this.tasktype,
                 taskname: this.taskname,
                 project: this.project,
+                description: this.description,
                 starting_time: this.starting_time,
                 dead_line: this.dead_line,
                 personalinfo: {
