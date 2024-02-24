@@ -6,7 +6,7 @@
         "description": "第三章作业, 具体pdf见群.",
         "starting_time": "2024-2-12",
         "dead_line": "2024-2-25",
-        "icon": "./assets/taskicons/wl.png"
+        "icon": "./src/assets/taskicons/wl.png"
     },
     {
         "taskname": "图像工程期末报告",
@@ -15,6 +15,6 @@
         "description": "根据这学期所学知识交一份报告, 共有两个选题.",
         "starting_time": "2024-2-20",
         "dead_line": "2024-2-26",
-        "icon": "./assets/taskicons/txgcjc.png"
+        "icon": "./src/assets/taskicons/txgcjc.png"
     }
 ]

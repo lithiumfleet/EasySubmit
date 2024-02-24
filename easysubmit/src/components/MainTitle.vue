@@ -6,7 +6,9 @@
         <div class="title-content">
             <h1>Easy Submit</h1>
         </div>
-        <img src="../assets/icons8-github-30.png" href="https://github.com/lithiumfleet/EasySubmit"/>
+        <a class="img-warp" href="https://github.com/lithiumfleet/EasySubmit">
+            <img src="../assets/icons8-github-30.png" />
+        </a>
     </div>
 </template>
 
@@ -20,7 +22,7 @@
     border-top-right-radius: 25px;
     border-top-left-radius:  25px;
 }
-.title img {
+.title .img-warp {
     position: absolute;
     right: 30px;
     align-self: center;
@@ -31,4 +33,5 @@
 .title .title-content {
     margin: auto;
 }
+
 </style>
