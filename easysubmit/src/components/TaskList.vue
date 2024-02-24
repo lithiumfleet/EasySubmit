@@ -62,10 +62,10 @@ export default {
 }
 
 .list-item {
-  flex-basis: 25%; 
+  flex-basis: 40%; 
   list-style-type: none; 
-  margin-left: 40px;
-  margin-right: 40px;
+  margin-left: 10px;
+  margin-right: 25px;
   margin-top: 25px;
   margin-bottom: 25px;
 }

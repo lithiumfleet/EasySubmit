@@ -51,7 +51,7 @@ import aboutProject from "./aboutpage/AboutProject.vue";
 
 <style scoped>
 .el-tabs {
-    --el-tabs-header-height: 130px;
+    --el-tabs-header-height: 115px;
 }
 .tab-label {
     display: flex;

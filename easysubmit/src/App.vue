@@ -26,22 +26,22 @@ import infoArea from "./components/InfoArea.vue"
 <style scoped>
 .main-page {
   text-align: center;
+  height: 1000px;
   width: 100%; 
   background-image: url(./assets/main-bg.jpg);
   background-size: cover;
   z-index: -1;
 }
 .main-page-warp {
-  width: 1300px;
-  height: auto;
+  width: 1180px;
   position: relative;
-  top: 50%;            
+  top: 5%;            
   left: 50%; 
   transform: translate(-50%);
 }
 .site-title {
   position: relative;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
   height: 90px;
   width: 100%;
   align-items: stretch;
@@ -58,10 +58,10 @@ import infoArea from "./components/InfoArea.vue"
 .info-area{
   align-items: stretch;
   position: relative;
-  margin-top: 8px;
-  height: 140px;
+  margin-top: 4px;
+  height: 170px;
   width: 100%;
-  background-color: rgb(242, 243, 244);
+  background-color: rgb(237, 238, 240);
   
 }
 </style>
