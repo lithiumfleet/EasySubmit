@@ -1,4 +1,3 @@
-@echo off
 rm -r ../backend/public/dist
 cp -r ./dist ../backend/public
 mkdir ../backend/public/dist/src
