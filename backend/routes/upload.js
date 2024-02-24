@@ -37,11 +37,11 @@ router.post('/*', (req, res) => {
         const uploadedFiles = files.file.map(file => {
             const fileName = file.originalFilename;
             const tempPath = file.path;
+            console.log("[upload.js] receive from remote to target path...");
             makeUploadDir('./uploads/', info)
             .then((targetdir) => {
                 const targetPath = targetdir + fileName;
-                console.log("target : "+targetPath);
-
+                console.log(fileName, " ");
                 fs.renameSync(tempPath, targetPath); 
                 return fileName;
             });

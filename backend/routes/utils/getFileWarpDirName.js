@@ -3,11 +3,13 @@ const  getPersonalFileWarpDirName = function(personalinfo) {
 
 }
 const  getTeamFileWarpDirName = function(teaminfo) {
-    let res = "";
+    let res = [];
     teaminfo.forEach((item) => {
-        res += getPersonalFileWarpDirName(item) + "_";
-    })
-    return res.slice(0,-1);
+        res.push(getPersonalFileWarpDirName(item));
+    });
+    let uniqueres = [...new Set(res)]; // FIXME: 前端没有判重...
+    uniqueres.sort();
+    return uniqueres.join("_");
 }
 
 exports.getPersonalFileWarpDirName = getPersonalFileWarpDirName;

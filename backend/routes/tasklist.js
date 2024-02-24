@@ -15,4 +15,16 @@ router.get('/', function(req, res, next) {
     })
 });
 
+router.get('/finished', function(req, res, next) {
+    console.log("get finished tasklist...");
+    fs.readFile('./src/finishedTaskList.json',(err, data)=>{
+        if (err) {
+            console.log("file no exists.");
+            throw err;
+        } else {
+            res.send(data);
+        }
+    })
+});
+
 module.exports = router;

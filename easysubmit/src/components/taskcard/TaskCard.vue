@@ -4,6 +4,10 @@ import uploadMain from "./uploadmain/UploadMain.vue"
 <script>
 export default {
     props: {
+        enable: {
+            type: Boolean,
+            default: true
+        },
         tasktype: {
             type: String,
             default: "personal"
@@ -30,7 +34,7 @@ export default {
         },
         icon: {
             type: String,
-            default: "/src/assets/icons8-物理-50.png"
+            default: "/src/assets/default_icon.png"
         }
     },
     data() {
@@ -53,7 +57,9 @@ export default {
     },
     methods: {
         open_upload_card() {
-            this.uploadCardVisiable = true;
+            if (this.enable) {
+                this.uploadCardVisiable = true;
+            }
         }
     }
 }

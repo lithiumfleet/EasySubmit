@@ -3,9 +3,19 @@ import taskCard from "./taskcard/TaskCard.vue"
 </script>
 <script>
 export default {
+  props: {
+    serverUrl: {
+      type: String,
+      default:'http://127.0.0.1:3000/tasklist/'
+    },
+    enableCards: {
+      type: Boolean,
+      default:true
+    }
+  },
   data() {return {
     tasklist: [],
-    serverURL: 'http://127.0.0.1:3000/tasklist/'
+    serverURL: this.serverUrl
   }},
   created() {
     fetch(this.serverURL)
@@ -33,6 +43,7 @@ export default {
         :starting_time="item.starting_time"
         :dead_line="item.dead_line"
         :icon="item.icon"
+        :enable="enableCards"
       /> 
     </li>
   </ul>

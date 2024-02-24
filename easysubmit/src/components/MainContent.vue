@@ -21,7 +21,10 @@ import aboutProject from "./aboutpage/AboutProject.vue";
                     <h3>已完成&emsp;</h3>
                 </div>
             </template>
-            <taskList/>
+            <taskList
+                serverUrl="http://127.0.0.1:3000/tasklist/finished" 
+                :enableCards="false"
+            />
 
         </el-tab-pane>
         <el-tab-pane label="About">
@@ -31,6 +34,7 @@ import aboutProject from "./aboutpage/AboutProject.vue";
                     <h3>提交记录</h3>
                 </div>
             </template>
+            <p>待完善...</p>
         </el-tab-pane>
 
         <el-tab-pane label="About">
