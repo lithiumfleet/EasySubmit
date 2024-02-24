@@ -38,6 +38,7 @@ import infoArea from "./components/InfoArea.vue"
   top: 5%;            
   left: 50%; 
   transform: translate(-50%);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 .site-title {
   position: relative;
@@ -45,6 +46,7 @@ import infoArea from "./components/InfoArea.vue"
   height: 90px;
   width: 100%;
   align-items: stretch;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 .main-content {
   align-items: stretch;
@@ -54,6 +56,7 @@ import infoArea from "./components/InfoArea.vue"
   position: relative;
   margin-top: 0px;
   margin-bottom: 0px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 .info-area{
   align-items: stretch;
@@ -62,6 +65,6 @@ import infoArea from "./components/InfoArea.vue"
   height: 170px;
   width: 100%;
   background-color: rgb(237, 238, 240);
-  
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 </style>

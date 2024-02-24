@@ -6,13 +6,13 @@
         <div class="title-content">
             <h1>Easy Submit</h1>
         </div>
-        <img src="../assets/icons8-github-30.png"/>
+        <img src="../assets/icons8-github-30.png" href="https://github.com/lithiumfleet/EasySubmit"/>
     </div>
 </template>
 
 <style>
 .title {
-    background-color: rgb(109, 243, 114);
+    background-color: rgb(134, 249, 138);
     width: 100%;
     height: 100%;
     display: flex;

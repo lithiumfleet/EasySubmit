@@ -6,7 +6,7 @@
         "description": "ppt大作业, 需要组队完成",
         "starting_time": "2024-2-21",
         "dead_line": "2024-2-22",
-        "icon": "/src/assets/taskicons/xhxt.png"
+        "icon": "./assets/taskicons/xhxt.png"
     },
     {
         "taskname": "物理报告",
@@ -15,7 +15,7 @@
         "description": "个人作业, 仔细填写实验报告",
         "starting_time": "2024-2-20",
         "dead_line": "2024-2-23",
-        "icon": "/src/assets/taskicons/wl.png"
+        "icon": "./assets/taskicons/wl.png"
     },
     {
         "taskname": "物理作业",
@@ -24,7 +24,7 @@
         "description": "第三章作业, 具体pdf见群.",
         "starting_time": "2024-2-12",
         "dead_line": "2024-2-25",
-        "icon": "/src/assets/taskicons/wl.png"
+        "icon": "./assets/taskicons/wl.png"
     },
     {
         "taskname": "图像工程期末报告",
@@ -33,6 +33,6 @@
         "description": "根据这学期所学知识交一份报告, 共有两个选题.",
         "starting_time": "2024-2-20",
         "dead_line": "2024-2-26",
-        "icon": "/src/assets/taskicons/txgcjc.png"
+        "icon": "./assets/taskicons/txgcjc.png"
     }
 ]
