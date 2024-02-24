@@ -6,6 +6,7 @@ import { check_valid_student_name, check_valid_student_number } from './CheckVal
 export default {
   data() { return {
     tableData:[],
+    tableDataSet: new Set(),
     new_student:{
       name:undefined,
       number:undefined
@@ -13,14 +14,17 @@ export default {
   } },
   methods: {
     deleteRow(index) {
-      this.tableData.splice(index, 1);
+      let delitem = this.tableData.splice(index, 1);
+      this.tableDataSet.delete(delitem[0].name+delitem[0].number);
       this.$emit('update-teaminfo', this.tableData);
     },
     onAddItem() {
-      if (check_valid_student_name(this.new_student.name) 
-          && check_valid_student_number(this.new_student.number)
+      if (check_valid_student_name(this.new_student.name) && 
+          check_valid_student_number(this.new_student.number) &&
+          !this.tableDataSet.has(this.new_student.name+this.new_student.number)
           ) {
           this.tableData.push(Object.assign({},this.new_student));
+          this.tableDataSet.add(this.new_student.name+this.new_student.number);
           this.$emit('update-teaminfo', this.tableData);
         }
     }

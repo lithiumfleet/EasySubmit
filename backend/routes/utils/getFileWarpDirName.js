@@ -7,7 +7,7 @@ const  getTeamFileWarpDirName = function(teaminfo) {
     teaminfo.forEach((item) => {
         res.push(getPersonalFileWarpDirName(item));
     });
-    let uniqueres = [...new Set(res)]; // FIXME: 前端没有判重...
+    let uniqueres = [...new Set(res)]; 
     uniqueres.sort();
     return uniqueres.join("_");
 }

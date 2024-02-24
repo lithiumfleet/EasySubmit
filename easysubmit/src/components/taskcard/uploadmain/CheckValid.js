@@ -6,8 +6,7 @@ const check_valid_student_number = function(input_number) {
 /* for student name */
 const check_valid_student_name = function(input_string) {
     if( !/^[\u4e00-\u9fa5]+$/.test(input_string) ||
-        input_string.length<=1 || 
-        input_string.length>=5) {
+        input_string.length<=1) {
         return false;
     }
     return true;

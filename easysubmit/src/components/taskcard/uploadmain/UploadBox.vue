@@ -11,7 +11,10 @@ export default {
     }},
     methods: {
         submitUpload() {
-            this.$refs.upload.submit();
+            if(this.info.personalinfo.name!==""&&this.info.personalinfo.number!=="" ||
+                this.info.teaminfo.length!==0) {
+                    this.$refs.upload.submit();
+            } 
         },
         successAlert() {
             this.filelist = []; 
@@ -52,7 +55,7 @@ export default {
             <br/>
             拖动文件到此处或<em>点击上传</em>文件
             <br/>
-            请保证单个文件大小在<strong>10MB</strong>以下~
+            请保证单个文件大小在<strong>5MB</strong>以下~
         </div>
     </el-upload>
     <div class="submit-button">

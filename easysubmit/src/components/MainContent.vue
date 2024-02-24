@@ -14,11 +14,11 @@ import aboutProject from "./aboutpage/AboutProject.vue";
             </template>
             <taskList/>
         </el-tab-pane>
-        <el-tab-pane label="已完成">
+        <el-tab-pane label="已截止">
             <template #label>
                 <div class="tab-label">
                     <img src="@/assets/icons8-finish-80.png"/>
-                    <h3>已完成&emsp;</h3>
+                    <h3>已截止&emsp;</h3>
                 </div>
             </template>
             <taskList
